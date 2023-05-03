@@ -12,47 +12,50 @@
 		></script>
 	</head>
 	<body>
-		<header class="navbar">
-			<div class="container row">
+		<!-- Navbar section -->
+		<header class="navbar" id="navbar">
+			<div class="navbar__container container row">
 				<button class="nav-toggle" aria-label="open navigation">
 					<span class="hamburger"></span>
 				</button>
 				<a class="logo" href="#"> Karen Robertson </a>
-				<nav class="nav">
+				<nav class="nav main__nav">
 					<ul class="nav__list nav__list--primary">
 						<li class="nav__item">
-							<a href="#" class="nav__link link__primary">Home</a>
+							<a href="#home" class="nav__link link__primary">Home</a>
 						</li>
 						<li class="nav__item">
-							<a href="#" class="nav__link">Projects</a>
+							<a href="#projects" class="nav__link">Projects</a>
 						</li>
 						<li class="nav__item">
 							<a href="about.html" class="nav__link">About</a>
 						</li>
 						<li class="nav__item">
-							<a href="#" class="nav__link">Contact</a>
+							<a href="#contact" class="nav__link">Contact</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<section class="hero">
+		<!-- Hero/Welcome Section -->
+		<section class="hero" id="home">
 			<div class="container row welcome">
 				<h1 class="welcome__title">
-					<span>Hello and Welcome.</span> I am software engineer
-					specialising in full stack web development.
+					Hi, I am Karen, <br> a software engineer. <br/>
+					<span class="subtitle">Specialising in full stack web development</span>
 				</h1>
 				<div class="welcome__subsection">
 					<p class="welcome__subtext">
 						Please see my projects below using a range of HTML, CSS,
-						vanilla Javascript or Python to deliver quality fully
+						vanilla Javascript or Python along with their respective libraries to deliver quality fully
 						responsive sites.
 					</p>
-					<a href="#" class="welcome__btn btn">Learn More</a>
+					<a href="#projects" class="welcome__btn btn">Learn More</a>
 				</div>
 			</div>
 		</section>
-		<section class="projects">
+		<!-- Project Cards -->
+		<section class="projects" id="projects">
 			<div class="container row">
 				<h1 class="projects__title">Projects</h1>
 				<div class="projects__container row">
@@ -66,11 +69,16 @@
 							<p class="project__text">
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit. Fusce sem erat, commodo
-								venenatis lorem eu, lobortis ornare dolor. Ut
-								consequat enim nec leo congue volutpat. Fusce
-								eget fermentum magna, non.
+								venenatis lorem eu, lobortis ornare dolor. 
 							</p>
-							<a href="#" class="project__btn btn">Learn More</a>
+							<div class="project__card--btns row">
+								<a href="#" class="project__btn btn"
+									>Learn More</a
+								>
+								<a href="#" class="project__btn btn"
+									>Live Demo</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="project__card">
@@ -83,11 +91,16 @@
 							<p class="project__text">
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit. Fusce sem erat, commodo
-								venenatis lorem eu, lobortis ornare dolor. Ut
-								consequat enim nec leo congue volutpat. Fusce
-								eget fermentum magna, non.
+								venenatis lorem eu, lobortis ornare dolor.
 							</p>
-							<a href="#" class="project__btn btn">Learn More</a>
+							<div class="project__card--btns">
+								<a href="#" class="project__btn btn"
+									>Learn More</a
+								>
+								<a href="#" class="project__btn btn"
+									>Live Demo</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="project__card">
@@ -100,18 +113,28 @@
 							<p class="project__text">
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit. Fusce sem erat, commodo
-								venenatis lorem eu, lobortis ornare dolor. Ut
-								consequat enim nec leo congue volutpat. Fusce
-								eget fermentum magna, non.
+								venenatis lorem eu, lobortis ornare dolor. 
 							</p>
-							<a href="#" class="project__btn btn">Learn More</a>
+							<div class="project__card--btns">
+								<a href="#" class="project__btn btn"
+									>Learn More</a
+								>
+								<a href="#" class="project__btn btn"
+									>Live Demo</a
+								>
+							</div>
 						</div>
 					</div>
 				</div>
-				<a href="https://github.com/indigorose" class="projects__btn btn">More Projects</a>
+				<a
+					href="https://github.com/indigorose"
+					class="projects__btn btn"
+					>More Projects</a
+				>
 			</div>
 		</section>
-		<section class="container contact">
+		<!-- Contact Section -->
+		<section class="container contact" id="contact">
 			<h1 class="contact__title">Contact</h1>
 			<div class="form-container">
 				<form class="form row">
@@ -125,16 +148,22 @@
 					<textarea
 						name="message"
 						id="message"
-						rows="6"
+						rows="5"
 						placeholder="Type your message here"
 					></textarea>
 					<button class="submit__btn btn">Submit</button>
 				</form>
 			</div>
 			<div class="contact__icons">
-				<a href="" class="contact__item"><i class="icon__link fa-brands fa-linkedin"></i></a>
-				<a href="" class="contact__item"><i class="icon__link fa-brands fa-github"></i></a>
-				<a href="" class="contact__item"><i class="icon__link fa-brands fa-twitter"></i></a>
+				<a href="" class="contact__item"
+					><i class="icon__link fa-brands fa-linkedin"></i
+				></a>
+				<a href="" class="contact__item"
+					><i class="icon__link fa-brands fa-github"></i
+				></a>
+				<a href="" class="contact__item"
+					><i class="icon__link fa-brands fa-twitter"></i
+				></a>
 				<a
 					href="mailto:robertson.k.l.a@gmail.com"
 					target="_blank"
@@ -145,6 +174,7 @@
 				</a>
 			</div>
 		</section>
+		<a href="#navbar">Back to the Top</a>
 		<script src="app.js"></script>
 	</body>
 </html>

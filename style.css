@@ -16,33 +16,39 @@ body {
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 p {
-    font-size: 0.9rem;
-    font-weight: 200;
+	font-size: 0.9rem;
+	font-weight: 200;
 }
 
 h1 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 900;
+	font-family: 'Outfit', sans-serif;
+	font-weight: 900;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
+	border: 1px solid black;
 }
 
-header {
-	background: #c7c9cf;
-	padding: 1em 0;
-	text-align: center;
+header,
+section {
+	border: 1px solid black;
 }
 
+label, input, textarea{
+	margin: 0 auto;
+	width: 95%;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
 /* Common style traits */
 .row {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
@@ -60,12 +66,19 @@ header {
 }
 
 /* Navbar */
+
+.navbar {
+	background-color: rgba(222, 203, 203, 0.8);
+	padding: 1em 0;
+	text-align: center;
+}
+
 .logo {
-    font-family: 'Outfit', sans-serif;
-    color: white;
-    font-size: 1.2rem;
-    padding-top: 0.4em;
-    font-weight: 900;
+	font-family: 'Outfit', sans-serif;
+	color: white;
+	font-size: 1.2rem;
+	padding-top: 0.4em;
+	font-weight: 900;
 }
 
 .nav {
@@ -78,7 +91,7 @@ header {
 	width: 3em;
 	height: 3em;
 	padding: 0em;
-    padding-bottom: 0.1em;
+	padding-bottom: 0.1em;
 	border-radius: 50%;
 	background: #a59678;
 	color: white;
@@ -118,12 +131,8 @@ header {
 
 .hamburger::after {
 	transform: translateY(3px);
-} 
+}
 
-/* made changes here from video
-   to make it more accessible.
-   
-   Works the same :) */
 .nav {
 	visibility: hidden;
 	height: 0;
@@ -142,8 +151,8 @@ header {
 }
 
 .nav__list--primary {
-    padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: 1em;
+	margin-bottom: 0;
 }
 
 .nav__item {
@@ -169,19 +178,23 @@ header {
 	padding: 0.25em 0.75em;
 	border-radius: 100px;
 }
+
 /* Hero-welcome Section */
-.hero{
-    padding: 2em 0;
-    border: 1px solid black;
+.hero {
+	padding: 2em 0;
 }
 
 .welcome__title {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.subtitle {
+	font-size: 1rem;
 }
 
 .welcome__subtext {
-    font-size: 0.9rem;
-    font-weight: 200;
+	font-size: 0.9rem;
+	font-weight: 200;
 	padding-bottom: 1em;
 }
 
@@ -193,12 +206,11 @@ header {
 /* Projects Section */
 .projects__title {
 	text-align: center;
-
 }
 
 .project__card {
 	border: 1px solid black;
-	padding-bottom: 1em;
+	padding: 1em;
 }
 
 .project__card + .project__card {
@@ -218,19 +230,21 @@ header {
 
 .projects__btn {
 	margin-top: 10px;
+	color: black;
+	width: fit-content;
 }
 
 /* Contact Section */
 
-label + input {
-	margin-bottom: 1em;
-}
+
+
 
 .submit__btn {
 	margin-top: 1em;
+	width: fit-content;
 }
 
-.icon__link{
+.icon__link {
 	font-size: 3rem;
 	color: black;
 }
@@ -244,9 +258,123 @@ label + input {
 	margin: 10px;
 }
 
-.contact__icons :hover{
+.contact__icons :hover {
 	color: blue;
 }
-@media (min-width: 700px) {
+@media (min-width: 750px) {
+	.container {
+		width: 750px;
+		border: 1px solid red;
+		padding: 1em;
+	}
+
+	/* Navbar Section  */
+	.nav-toggle {
+		display: none;
+	}
+	.navbar {
+		overflow: hidden;
+	}
+
+	.logo {
+		padding-right: 0.5em;
+	}
+	.nav {
+		/* border: 1px solid red; */
+		visibility: visible;
+		display: flex;
+		height: auto;
+		align-items: center;
+		width: fit-content;
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+	.nav__list {
+		margin-top: 0.4em;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		font-size: 0.9rem;
+	}
+
+	.nav__item {
+		padding-top: 0.5em;
+		/* border: 1px solid white; */
+		font-family: 'Montserrat', serif;
+		text-transform: uppercase;
+	}
+
+	.nav__item + .nav__item {
+		margin-left: 1.5em;
+	}
+
+	/* Hero/Welcome Section */
+	.welcome__title {
+		font-size: 2.1rem;
+		width: 90%;
+	}
+
+	.welcome__subsection {
+		padding-top: 1em;
+		padding-right: 1.5em;
+		width: 80%;
+		text-align: justify;
+	}
+
+	/* Projects section */
+
+	.projects > .row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.project__card + .project__card {
+		margin-top: 0;
+	}
+
+	/* Contact Section */
+	.form {
+		border: 1px solid black;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1000px) {
+	/* Overall changes */
+	.container {
+		width: 1000px;
+	}
+
+	/* Project Section */
+
+	.projects > .row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.projects {
+		padding: 2em;
+	}
+
+	.projects__container {
+		padding: 1em 0;
+	}
+
+	.project__card + .project__card {
+		margin-left: 30px;
+	}
+
+	.project__btn + .project__btn {
+		margin-left: 30px;
+	}
 
 }
