@@ -6,7 +6,6 @@
 	box-sizing: border-box;
 }
 /* TODO - fix hovering on all links */
-/* TODO - build desktop version */
 /* TODO - fix about page */
 /* Core CSS styling */
 body {
@@ -57,6 +56,7 @@ label, input, textarea{
 	margin: 0 auto;
 	/* added for nav-toggle positioning */
 	position: relative;
+	overflow: hidden;
 }
 
 .btn {
@@ -68,9 +68,15 @@ label, input, textarea{
 /* Navbar */
 
 .navbar {
-	background-color: rgba(222, 203, 203, 0.8);
+	background-color: rgba(0, 0, 0, 0.2);
 	padding: 1em 0;
 	text-align: center;
+	z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
+	backdrop-filter: blur( 8px) ;
+	
 }
 
 .logo {

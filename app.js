@@ -7,11 +7,11 @@ navToggle.addEventListener('click', () => {
 	nav.classList.toggle('nav--visible');
 });
 
-window.addEventListener('scroll', function(){
-	if(document.documentElement.scrollTop >= 20){
-		navbar.classList.add('sticky');
-	}
-	else {
-		navbar.classList.remove('sticky');
-	}
-})
+// window.addEventListener('scroll', function(){
+// 	if(document.documentElement.scrollTop >= 20){
+// 		navbar.classList.add('sticky');
+// 	}
+// 	else {
+// 		navbar.classList.remove('sticky');
+// 	}
+// })
