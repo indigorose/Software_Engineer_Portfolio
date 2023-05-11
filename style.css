@@ -5,6 +5,15 @@
 *::after {
 	box-sizing: border-box;
 }
+
+:root {
+	--background-img: url(./images/background--img.jpg);
+	--background-color: #ffffff;
+	--text-color-1: #1a1a1a;
+	--text-color-2: #fff;
+	
+
+}
 /* TODO - fix hovering on all links */
 /* TODO - fix about page */
 /* Core CSS styling */
@@ -12,6 +21,7 @@ body {
 	margin: 0;
 	font-family: 'Montserrat', 'Outfit', serif, sans-serif;
 	font-size: 16px;
+
 }
 
 a {
@@ -38,12 +48,15 @@ section {
 	border: 1px solid black;
 }
 
-label, input, textarea{
+label,
+input,
+textarea {
 	margin: 0 auto;
 	width: 95%;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
+
 /* Common style traits */
 .row {
 	display: flex;
@@ -56,7 +69,7 @@ label, input, textarea{
 	margin: 0 auto;
 	/* added for nav-toggle positioning */
 	position: relative;
-	overflow: hidden;
+	overflow: hidden;	
 }
 
 .btn {
@@ -68,17 +81,17 @@ label, input, textarea{
 /* Navbar */
 
 .navbar {
-	background-color: rgba(0, 0, 0, 0.2);
 	padding: 1em 0;
 	text-align: center;
 	z-index: 999;
-    position: sticky;
-    top:0;
-    left:0;
-	backdrop-filter: blur( 8px) ;
-	
+	position: sticky;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(8px);
 }
-
+.nav {
+	width: 100%;
+}
 .logo {
 	font-family: 'Outfit', sans-serif;
 	color: white;
@@ -87,105 +100,16 @@ label, input, textarea{
 	font-weight: 900;
 }
 
-.nav {
-	width: 100%;
+.logo--desktop {
+	display: none;
 }
 
-.nav-toggle {
-	cursor: pointer;
-	border: 0;
-	width: 3em;
-	height: 3em;
-	padding: 0em;
-	padding-bottom: 0.1em;
-	border-radius: 50%;
-	background: #a59678;
-	color: white;
-	transition: opacity 250ms ease;
-	position: absolute;
-	left: 0;
-}
 
-.nav-toggle:focus,
-.nav-toggle:hover {
-	opacity: 0.75;
-}
 
-.hamburger {
-	width: 50%;
-	position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-	display: block;
-	margin: 0 auto;
-	height: 3px;
-	background: white;
-}
-
-.hamburger::before,
-.hamburger::after {
-	content: '';
-	width: 100%;
-}
-
-.hamburger::before {
-	transform: translateY(-6px);
-}
-
-.hamburger::after {
-	transform: translateY(3px);
-}
-
-.nav {
-	visibility: hidden;
-	height: 0;
-}
-
-.nav--visible {
-	visibility: visible;
-	height: auto;
-	position: relative;
-}
-
-.nav__list {
-	align-items: center;
-	padding-left: 0;
-	font-size: 1rem;
-}
-
-.nav__list--primary {
-	padding-top: 1em;
-	margin-bottom: 0;
-}
-
-.nav__item {
-	/* border: 1px solid white; */
-	list-style: none;
-	padding-bottom: 1rem;
-}
-.nav__link {
-	text-decoration: none;
-	color: #fff;
-}
-
-.nav__link:hover,
-.nav__link:focus {
-	opacity: 0.65;
-}
-
-.nav__link--button {
-	background-color: #a59678;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: #fff;
-	padding: 0.25em 0.75em;
-	border-radius: 100px;
-}
 
 /* Hero-welcome Section */
+
+
 .hero {
 	padding: 2em 0;
 }
@@ -242,9 +166,6 @@ label, input, textarea{
 
 /* Contact Section */
 
-
-
-
 .submit__btn {
 	margin-top: 1em;
 	width: fit-content;
@@ -268,6 +189,14 @@ label, input, textarea{
 	color: blue;
 }
 @media (min-width: 750px) {
+	body {
+		background-image: var(--background-img);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-attachment: fixed;
+	}
+
 	.container {
 		width: 750px;
 		border: 1px solid red;
@@ -320,6 +249,9 @@ label, input, textarea{
 	}
 
 	/* Hero/Welcome Section */
+	.hero {
+		padding: 10em 0;
+	}
 	.welcome__title {
 		font-size: 2.1rem;
 		width: 90%;
@@ -382,5 +314,4 @@ label, input, textarea{
 	.project__btn + .project__btn {
 		margin-left: 30px;
 	}
-
 }
