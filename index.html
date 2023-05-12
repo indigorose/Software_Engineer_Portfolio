@@ -14,34 +14,51 @@
 	<body>
 		<!-- Navbar section -->
 		<header class="navbar" id="navbar">
-			<div class="navbar__container container row">
-				<nav class="nav main__nav">
-					<ul class="nav__list nav__list--primary">
-						<li class="nav__item">
-							<a class="logo" href="#">KR.<span class="logo--desktop">Karen Robertson.</span></a>
-
-						</li>
-						<li class="nav__item">
-							<a href="#home" class="nav__link link__primary"
-								>Home</a
-							>
-						</li>
-						<li class="nav__item">
-							<a href="about.html" class="nav__link">About</a>
-						</li>
-						<li class="nav__item">
-							<a href="#projects" class="nav__link">Projects</a>
-						</li>
-						<li class="nav__item">
-							<a href="#contact" class="nav__link">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="nav main__nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="logo" href="#"
+							>KR.<span class="logo--desktop"
+								>Karen Robertson.</span
+							></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link"
+							><i class="fa-solid fa-house nav__link--mobile"></i
+							><span class="nav__link--desktop">Home</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="about.html" class="nav__link"
+							><i
+								class="fa-regular fa-address-card nav__link--mobile"
+							></i
+							><span class="nav__link--desktop">About</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#projects" class="nav__link"
+							><i
+								class="fa-regular fa-image nav__link--mobile"
+							></i
+							><span class="nav__link--desktop">Projects</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#contact" class="nav__link"
+							><i
+								class="fa-regular fa-envelope nav__link--mobile"
+							></i
+							><span class="nav__link--desktop">Contact</span></a
+						>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<!-- Hero/Welcome Section -->
 		<section class="hero" id="home">
-			<div class="container row welcome">
+			<div class="container row welcome__main">
 				<h1 class="welcome__title">
 					Hi, I am Karen, <br />
 					a software engineer. <br />
@@ -61,7 +78,7 @@
 		</section>
 		<!-- Project Cards -->
 		<section class="projects" id="projects">
-			<div class="container row">
+			<div class="container row projects__main">
 				<h1 class="projects__title">Projects</h1>
 				<div class="projects__container row">
 					<div class="project__card">
@@ -131,11 +148,13 @@
 						</div>
 					</div>
 				</div>
-				<a
-					href="https://github.com/indigorose"
-					class="projects__btn btn"
-					>More Projects</a
-				>
+				<div class="projects__btn">
+					<a
+						href="https://github.com/indigorose"
+						class="projects__btn--more btn"
+						>More Projects</a
+					>
+				</div>
 			</div>
 		</section>
 		<!-- Contact Section -->
@@ -179,7 +198,7 @@
 				</a>
 			</div>
 		</section>
-		<a href="#navbar">Back to the Top</a>
+		<div class="return__btn"><a href="#"><i class="fa-solid fa-arrow-up arrow__btn btn"></i></a></div>
 		<script src="app.js"></script>
 	</body>
 </html>

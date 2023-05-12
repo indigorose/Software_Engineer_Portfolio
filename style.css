@@ -1,3 +1,5 @@
+/* Core CSS styling */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;0,900;1,500&family=Outfit:wght@200;300;400;500;700&display=swap');
 
 *,
@@ -9,33 +11,39 @@
 :root {
 	--background-img: url(./images/background--img.jpg);
 	--background-color: #ffffff;
-	--text-color-1: #1a1a1a;
+	--text-color-1: rgb(69, 71, 70);
 	--text-color-2: #fff;
-	
-
+	--color-1: rgb(255, 245, 228);
+	--color-2: rgb(255, 227, 225);
+	--color-3: rgb(255, 209, 209);
+	--color-4: rgba(255, 148, 148, 0.6);
 }
-/* TODO - fix hovering on all links */
-/* TODO - fix about page */
-/* Core CSS styling */
+
 body {
 	margin: 0;
 	font-family: 'Montserrat', 'Outfit', serif, sans-serif;
 	font-size: 16px;
-
+	color: var(--text-color-1);
 }
 
 a {
 	text-decoration: none;
 }
 
-p {
-	font-size: 0.9rem;
-	font-weight: 200;
-}
-
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Outfit', sans-serif;
 	font-weight: 900;
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 0.9rem;
+	font-weight: 300;
 }
 
 img {
@@ -43,22 +51,23 @@ img {
 	border: 1px solid black;
 }
 
-header,
-section {
-	border: 1px solid black;
-}
-
 label,
 input,
 textarea {
 	margin: 0 auto;
-	width: 95%;
+	width: 90%;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
+	margin-left: 5%;
+	font-size: 1.2rem;
 }
 
-/* Common style traits */
-.row {
+div {
+	border: 1px solid white;
+}
+
+/* Universal style traits */
+.row-col {
 	display: flex;
 	flex-direction: column;
 }
@@ -67,51 +76,91 @@ textarea {
 	width: 80%;
 	max-width: 1100px;
 	margin: 0 auto;
-	/* added for nav-toggle positioning */
 	position: relative;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .btn {
-	border: 1px solid black;
+	border: 1px solid rgb(154, 154, 154);
 	padding: 0.25em 0.75em;
-	border-radius: 10px;
+	color: var(--text-color-1);
 }
+
+.welcome__btn, .project__btn, .projects__btn--more, .submit__btn, .arrow__btn {
+	background-color: var(--color-3);
+	font-size: 0.9rem;
+	color: var(--text-color-1);
+}
+
+.welcome__btn:hover, .project__btn:hover, .projects__btn--more:hover, .submit__btn:hover {
+	background-color: var(--color-1);
+	transition: 2s;
+}
+
+/* Mobile-first design traits */
 
 /* Navbar */
 
 .navbar {
-	padding: 1em 0;
+	padding: 0em 0;
 	text-align: center;
 	z-index: 999;
 	position: sticky;
 	top: 0;
 	left: 0;
 	backdrop-filter: blur(8px);
+	background-color: var(--color-4);
 }
-.nav {
-	width: 100%;
+
+.nav__list {
+	padding: 0;
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	align-items: center;
+	list-style: none;
 }
+
+.logo,
+.nav__link {
+	font-size: 1.8rem;
+	transition: 0.3s;
+}
+
 .logo {
 	font-family: 'Outfit', sans-serif;
-	color: white;
-	font-size: 1.2rem;
-	padding-top: 0.4em;
 	font-weight: 900;
 }
 
+.logo,
 .logo--desktop {
+	color: var(--text-color-1);
+}
+
+.logo--desktop,
+.nav__link--desktop {
 	display: none;
 }
 
+.nav__link--mobile,
+.nav__link--mobile {
+	color: var(--text-color-1);
+}
 
+.logo:hover, .nav__link :hover{
+	color: var(--color-1);
+	transition: 0.3s;
+}
 
-
-/* Hero-welcome Section */
-
+/* Hero-Home Section */
 
 .hero {
 	padding: 2em 0;
+}
+
+.welcome__subsection {
+	padding-bottom: 1em;
 }
 
 .welcome__title {
@@ -123,60 +172,56 @@ textarea {
 }
 
 .welcome__subtext {
-	font-size: 0.9rem;
-	font-weight: 200;
 	padding-bottom: 1em;
 }
 
-.welcome__btn {
-	font-size: 0.9rem;
-	color: black;
-}
 
 /* Projects Section */
+
+.projects__main {
+	background-color: var(--text-color-2);
+}
+
 .projects__title {
-	text-align: center;
+	text-align: justify;
 }
 
 .project__card {
-	border: 1px solid black;
-	padding: 1em;
+	background-color: var(--color-2);
+	padding: 1.5em;
 }
 
 .project__card + .project__card {
-	margin-top: 20px;
+	margin-top: 1.5em;
 }
 
-.project__title {
-	font-size: 1.2rem;
+.project__card--btns, .projects__btn {
+	padding: 1em 0;
 }
+
+.project__details {
+	background-color: var(--background-color);
+}
+
 .project__text {
-	font-size: 0.9rem;
+	padding: 0 1em;
 }
 
-.project__btn {
-	color: black;
-}
-
-.projects__btn {
-	margin-top: 10px;
-	color: black;
-	width: fit-content;
+.project__card--btns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
 }
 
 /* Contact Section */
-
-.submit__btn {
-	margin-top: 1em;
-	width: fit-content;
-}
 
 .icon__link {
 	font-size: 3rem;
 	color: black;
 }
 .contact__icons {
-	border: 1px solid black;
 	width: fit-content;
 	margin: 0 auto;
 	padding: 1em;
@@ -185,9 +230,25 @@ textarea {
 	margin: 10px;
 }
 
-.contact__icons :hover {
-	color: blue;
+.icon__link {
+	color: var(--text-color-1);
 }
+
+.icon__link:hover{
+	color: var(--color-4);
+	transition: 2s;
+}
+
+.submit__btn {
+	margin-left: 5%;
+}
+
+.return__btn {
+	width: fit-content;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
 @media (min-width: 750px) {
 	body {
 		background-image: var(--background-img);
@@ -199,7 +260,7 @@ textarea {
 
 	.container {
 		width: 750px;
-		border: 1px solid red;
+		/* border: 1px solid red; */
 		padding: 1em;
 	}
 
@@ -211,9 +272,16 @@ textarea {
 		overflow: hidden;
 	}
 
-	.logo {
-		padding-right: 0.5em;
+	.logo,
+	.nav__link--mobile {
+		display: none;
 	}
+
+	.logo--desktop,
+	.nav__link--desktop {
+		display: inline;
+	}
+
 	.nav {
 		/* border: 1px solid red; */
 		visibility: visible;
