@@ -13,10 +13,10 @@
 	--background-color: #ffffff;
 	--text-color-1: rgb(69, 71, 70);
 	--text-color-2: #fff;
-	--color-1: rgb(255, 245, 228);
-	--color-2: rgb(255, 227, 225);
-	--color-3: rgb(255, 209, 209);
-	--color-4: rgba(255, 148, 148, 0.6);
+	--color-1: rgb(228, 231, 255);
+	--color-2: rgb(241, 235, 253);
+	--color-3: rgb(234, 214, 250);
+	--color-4: rgba(200, 148, 255, 0.6);
 }
 
 body {
@@ -187,7 +187,7 @@ div {
 }
 
 .project__card {
-	background-color: var(--color-2);
+	/* background-color: var(--color-2); */
 	padding: 1.5em;
 }
 
@@ -216,6 +216,10 @@ div {
 }
 
 /* Contact Section */
+
+.contact__title, .form-container{
+	display: none;
+}
 
 .icon__link {
 	font-size: 3rem;
@@ -250,13 +254,13 @@ div {
 }
 
 @media (min-width: 750px) {
-	body {
+	/* body {
 		background-image: var(--background-img);
 		background-size: 100vw 100vh;
 		background-repeat: no-repeat;
 		background-position: right top;
 		background-attachment: fixed;
-	}
+	} */
 
 	.container {
 		width: 750px;
@@ -265,12 +269,6 @@ div {
 	}
 
 	/* Navbar Section  */
-	.nav-toggle {
-		display: none;
-	}
-	.navbar {
-		overflow: hidden;
-	}
 
 	.logo,
 	.nav__link--mobile {
@@ -279,7 +277,10 @@ div {
 
 	.logo--desktop,
 	.nav__link--desktop {
-		display: inline;
+		display: flex;
+		
+		font-size: 1rem;
+		color: var(--text-color-1)
 	}
 
 	.nav {
@@ -289,12 +290,6 @@ div {
 		height: auto;
 		align-items: center;
 		width: fit-content;
-	}
-
-	.row {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
 	}
 
 	.nav__list {
