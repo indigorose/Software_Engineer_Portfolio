@@ -86,13 +86,20 @@ div {
 	color: var(--text-color-1);
 }
 
-.welcome__btn, .project__btn, .projects__btn--more, .submit__btn, .arrow__btn {
+.welcome__btn,
+.project__btn,
+.projects__btn--more,
+.submit__btn,
+.arrow__btn {
 	background-color: var(--color-3);
 	font-size: 0.9rem;
 	color: var(--text-color-1);
 }
 
-.welcome__btn:hover, .project__btn:hover, .projects__btn--more:hover, .submit__btn:hover {
+.welcome__btn:hover,
+.project__btn:hover,
+.projects__btn--more:hover,
+.submit__btn:hover {
 	background-color: var(--color-1);
 	transition: 2s;
 }
@@ -148,7 +155,8 @@ div {
 	color: var(--text-color-1);
 }
 
-.logo:hover, .nav__link :hover{
+.logo:hover,
+.nav__link :hover {
 	color: var(--color-1);
 	transition: 0.3s;
 }
@@ -175,7 +183,6 @@ div {
 	padding-bottom: 1em;
 }
 
-
 /* Projects Section */
 
 .projects__main {
@@ -195,7 +202,8 @@ div {
 	margin-top: 1.5em;
 }
 
-.project__card--btns, .projects__btn {
+.project__card--btns,
+.projects__btn {
 	padding: 1em 0;
 }
 
@@ -217,7 +225,8 @@ div {
 
 /* Contact Section */
 
-.contact__title, .form-container{
+.contact__title,
+.form-container {
 	display: none;
 }
 
@@ -238,7 +247,7 @@ div {
 	color: var(--text-color-1);
 }
 
-.icon__link:hover{
+.icon__link:hover {
 	color: var(--color-4);
 	transition: 2s;
 }
@@ -261,6 +270,26 @@ div {
 		background-position: right top;
 		background-attachment: fixed;
 	} */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Outfit', sans-serif;
+		font-weight: 900;
+		font-size: 2.5rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+
+	.btn {
+		font-size: 1.5rem;
+	}
+
 
 	.container {
 		width: 750px;
@@ -278,9 +307,9 @@ div {
 	.logo--desktop,
 	.nav__link--desktop {
 		display: flex;
-		
+
 		font-size: 1rem;
-		color: var(--text-color-1)
+		color: var(--text-color-1);
 	}
 
 	.nav {
@@ -319,6 +348,10 @@ div {
 		font-size: 2.1rem;
 		width: 90%;
 	}
+	
+	.subtitle {
+		font-size: 1.5rem;
+	}
 
 	.welcome__subsection {
 		padding-top: 1em;
@@ -351,6 +384,7 @@ div {
 
 @media (min-width: 1000px) {
 	/* Overall changes */
+
 	.container {
 		width: 1000px;
 	}
