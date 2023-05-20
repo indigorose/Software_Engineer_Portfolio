@@ -9,21 +9,25 @@
 }
 
 :root {
-	--background-img: url(./images/background--img.jpg);
+	--background-img: url(./images/desktop_background01.jpg);
 	--background-color: #ffffff;
-	--text-color-1: rgb(69, 71, 70);
+	--text-color-1: rgb(100, 100, 100);
 	--text-color-2: #fff;
+	--text-color-3: rgb(111, 111, 111);
 	--color-1: rgb(228, 231, 255);
 	--color-2: rgb(241, 235, 253);
-	--color-3: rgb(234, 214, 250);
-	--color-4: rgba(200, 148, 255, 0.6);
+	--color-3: rgb(237, 237, 252);
+	--color-4: rgb(234, 214, 250);
+	--color-5: rgba(200, 148, 255, 0.6);
+	--color-6: rgb(147, 147, 251);
+	
 }
 
 body {
 	margin: 0;
 	font-family: 'Montserrat', 'Outfit', serif, sans-serif;
 	font-size: 16px;
-	color: var(--text-color-1);
+	color: var(--text-color-3);
 }
 
 a {
@@ -74,7 +78,7 @@ div {
 
 .container {
 	width: 80%;
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
@@ -100,7 +104,7 @@ div {
 .project__btn:hover,
 .projects__btn--more:hover,
 .submit__btn:hover {
-	background-color: var(--color-1);
+	background-color: var(--color-6);
 	transition: 2s;
 }
 
@@ -263,13 +267,13 @@ div {
 }
 
 @media (min-width: 750px) {
-	/* body {
+	body {
 		background-image: var(--background-img);
 		background-size: 100vw 100vh;
 		background-repeat: no-repeat;
 		background-position: right top;
 		background-attachment: fixed;
-	} */
+	}
 	h1,
 	h2,
 	h3,
@@ -345,12 +349,13 @@ div {
 		padding: 10em 0;
 	}
 	.welcome__title {
-		font-size: 2.1rem;
+		font-size: 3rem;
 		width: 90%;
 	}
 	
 	.subtitle {
-		font-size: 1.5rem;
+		font-size: 2rem;
+		padding-bottom: 0;
 	}
 
 	.welcome__subsection {
@@ -358,6 +363,7 @@ div {
 		padding-right: 1.5em;
 		width: 80%;
 		text-align: justify;
+		color: var(--text-color-3);
 	}
 
 	/* Projects section */
