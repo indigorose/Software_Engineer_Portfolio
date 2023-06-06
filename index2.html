@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Karen Robertson - Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/5207c94356.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<!-- Navbar section -->
+		<header class="navbar" id="navbar">
+			<nav class="nav main__nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="logo" href="#"
+							>KR.<span class="logo--desktop"
+								>Karen Robertson.</span
+							></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link"
+							><i class="fa-solid fa-house nav__link--mobile"></i
+							><span class="nav__link--desktop"> Home</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#about" class="nav__link"
+							><i
+								class="fa-regular fa-address-card nav__link--mobile"
+							></i
+							><span class="nav__link--desktop"> About</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#projects" class="nav__link"
+							><i
+								class="fa-regular fa-image nav__link--mobile"
+							></i
+							><span class="nav__link--desktop">
+								Projects</span
+							></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#contact" class="nav__link"
+							><i
+								class="fa-regular fa-envelope nav__link--mobile"
+							></i
+							><span class="nav__link--desktop"> Contact</span></a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Hero/Welcome Section -->
+		<section class="hero" id="home">
+			<div class="container row welcome__main">
+				<h1 class="welcome__title">Hello and Welcome</h1>
+				<h3 class="subtitle">
+					I'm Karen, a software engineer specialising in full stack
+					web development
+				</h3>
+				<div class="welcome__subsection">
+					<p class="welcome__subtext">
+						Creative, detail-oriented, software engineer with a
+						passion for building dynamic websites and applications.
+					</p>
+					<p class="welcome__subtext">
+						Please see my projects below using a range of HTML, CSS,
+						Javascript or Python along with their respective
+						libraries.
+					</p>
+					<a href="#projects" class="welcome__btn btn">Learn More</a>
+				</div>
+			</div>
+		</section>
+		<!-- About -->
+		<section id="about" class="about">
+			<div class="container techstack__container">
+				<h2>Tech stack</h2>
+				<div id="techstack__items">
+					<div class="techstack--card">
+						<p>Python, Django, Flask</p>
+					</div>
+					<div div class="techstack--card">
+						<p>HTML, CSS, JavaScript</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Project Cards -->
+		<section class="projects" id="projects">
+			<div class="container row projects__main">
+				<h1 class="projects__title">Projects</h1>
+				<div class="projects__container row">
+					<div class="project__card">
+						<img
+							src="./images/watermarking_app.png"
+							alt="watermarking_app screenshot"
+						/>
+						<h2 class="project__title">Image Watermarking App</h2>
+						<div class="project__details">
+							<p class="project__text">
+								An image watermarking app using the tkinter
+								interface and Pillow, a fork of the Python
+								Interface Library (aka PIL) within Python to add
+								a text watermark to an image.
+							</p>
+							<div class="project__card--btns row">
+								<a
+									href="https://github.com/indigorose/Image-Watermarking-App"
+									class="project__btn btn"
+									>Learn More</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="project__card">
+						<img
+							src="./images/work_in_progress.png"
+							alt="work in progress text and working man"
+						/>
+						<h2 class="project__title">Javascript Projects</h2>
+						<div class="project__details">
+							<p class="project__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Fusce sem erat, commodo
+								venenatis lorem eu, lobortis ornare dolor.
+							</p>
+							<div class="project__card--btns">
+								<a href="#" class="project__btn btn"
+									>Learn More</a
+								>
+								<a href="#" class="project__btn btn"
+									>Live Demo</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="project__card">
+						<img
+							src="./images/work_in_progress.png"
+							alt="work in progress text and working man"
+						/>
+						<h2 class="project__title">Javascript Projects</h2>
+						<div class="project__details">
+							<p class="project__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Fusce sem erat, commodo
+								venenatis lorem eu, lobortis ornare dolor.
+							</p>
+							<div class="project__card--btns">
+								<a href="#" class="project__btn btn"
+									>Learn More</a
+								>
+								<a href="#" class="project__btn btn"
+									>Live Demo</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="projects__btn">
+					<a
+						href="https://github.com/indigorose"
+						class="projects__btn--more btn"
+						>More Projects</a
+					>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Section -->
+		<section class="container contact" id="contact">
+			<h1 class="contact__title">Contact</h1>
+			<div class="form-container">
+				<form class="form row">
+					<label htmlFor="">Your Name</label>
+					<input type="text" name="your name" id="name" />
+					<label htmlFor="">Email </label>
+					<input type="text" name="email" id="emai" />
+					<label htmlFor="">Subject </label>
+					<input type="text" name="subject" id="Name" />
+					<label htmlFor="">Message </label>
+					<textarea
+						name="message"
+						id="message"
+						rows="5"
+						placeholder="Type your message here"
+					></textarea>
+					<button class="submit__btn btn">Submit</button>
+				</form>
+			</div>
+			<div class="contact__icons">
+				<a href="" class="contact__item"
+					><i class="icon__link fa-brands fa-linkedin"></i
+				></a>
+				<a href="" class="contact__item"
+					><i class="icon__link fa-brands fa-github"></i
+				></a>
+				<a href="" class="contact__item"
+					><i class="icon__link fa-brands fa-twitter"></i
+				></a>
+				<!-- <a
+					href="mailto:"
+					target="_blank"
+					rel="noreferrer"
+					class="contact__item"
+				>
+					<i class="icon__link fa-regular fa-envelope"></i>
+				</a> -->
+			</div>
+		</section>
+		<div class="return__btn">
+			<a href="#"><i class="fa-solid fa-arrow-up arrow__btn btn"></i></a>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
