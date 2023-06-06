@@ -20,7 +20,6 @@
 	--color-4: rgb(234, 214, 250);
 	--color-5: rgba(200, 148, 255, 0.6);
 	--color-6: rgb(147, 147, 251);
-	
 }
 
 body {
@@ -294,11 +293,11 @@ div {
 		font-size: 1.5rem;
 	}
 
-
 	.container {
 		width: 750px;
 		/* border: 1px solid red; */
 		padding: 1em;
+		background: white;
 	}
 
 	/* Navbar Section  */
@@ -352,7 +351,7 @@ div {
 		font-size: 3rem;
 		width: 90%;
 	}
-	
+
 	.subtitle {
 		font-size: 2rem;
 		padding-bottom: 0;
